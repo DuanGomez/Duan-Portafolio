@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     image: 'projects/trainix.webp',
     demo: `${PAGES}/Trainix/`,
     repo: `${GH}/Trainix`,
-    accent: '#3D5AFE',
+    accent: '#E6A400',
   },
   {
     id: 'saas-ventas',

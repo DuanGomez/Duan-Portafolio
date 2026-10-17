@@ -17,7 +17,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '7+', label: 'proyectos publicados' },
+  { value: '8+', label: 'proyectos publicados' },
   { value: '7', label: 'meses en WeSportech' },
   { value: '4.º', label: 'semestre de Ingeniería' },
 ];
@@ -52,6 +52,19 @@ export const PROJECTS: Project[] = [
     demo: `${PAGES}/Waia/`,
     repo: `${GH}/Waia`,
     accent: '#0E8A50',
+  },
+  {
+    id: 'laboratorio-de-masas',
+    name: 'Laboratorio de Masas',
+    kicker: 'Física interactiva en 3D',
+    summary: 'App educativa donde dos bolas de acero cromado siguen las leyes de Newton: empuje con fricción, choques con restitución, caída libre con aire y un péndulo de Newton.',
+    highlights: ['Motor de física puro con paso fijo de 2 ms y 20 pruebas unitarias', 'Escena Three.js con reflejos PMREM, sombras y cámara con límites', 'Conclusiones automáticas en lenguaje sencillo al terminar cada experimento'],
+    stack: ['Angular', 'Three.js', 'TypeScript', 'Vitest'],
+    image: 'projects/laboratorio.webp',
+    gallery: ['projects/laboratorio-pendulo.webp'],
+    demo: `${PAGES}/Laboratorio-de-Masas/`,
+    repo: `${GH}/Laboratorio-de-Masas`,
+    accent: '#0071E3',
   },
   {
     id: 'smartkitchen',

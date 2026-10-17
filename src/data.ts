@@ -17,7 +17,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '6+', label: 'proyectos publicados' },
+  { value: '7+', label: 'proyectos publicados' },
   { value: '7', label: 'meses en WeSportech' },
   { value: '4.º', label: 'semestre de Ingeniería' },
 ];
@@ -40,6 +40,19 @@ const PAGES = 'https://duangomez.github.io';
 const GH = 'https://github.com/DuanGomez';
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'waia',
+    name: 'Waia',
+    kicker: 'Asistente de WhatsApp para negocios',
+    summary: 'Producto SaaS que atiende el WhatsApp de un negocio: responde preguntas frecuentes, comparte precios del catálogo y convierte consultas en clientes potenciales.',
+    highlights: ['Motor de reglas propio: intención, contexto y captura de datos', 'Simulador de conversaciones con transferencia a una persona', 'Un mismo producto configurado para restaurante, tienda y barbería'],
+    stack: ['Angular', 'TypeScript', 'Signals', 'SVG'],
+    image: 'projects/waia.webp',
+    gallery: ['projects/waia-resumen.webp'],
+    demo: `${PAGES}/Waia/`,
+    repo: `${GH}/Waia`,
+    accent: '#0E8A50',
+  },
   {
     id: 'smartkitchen',
     name: 'SmartKitchen',

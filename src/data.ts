@@ -17,7 +17,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '8+', label: 'proyectos publicados' },
+  { value: '9+', label: 'proyectos publicados' },
   { value: '7', label: 'meses en WeSportech' },
   { value: '4.º', label: 'semestre de Ingeniería' },
 ];
@@ -40,6 +40,19 @@ const PAGES = 'https://duangomez.github.io';
 const GH = 'https://github.com/DuanGomez';
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'wms',
+    name: 'WMS',
+    kicker: 'SaaS de monitoreo de flotas',
+    summary: 'Plataforma multi-empresa para ver en tiempo real los vehículos de una pyme sobre el mapa de Medellín, con geocercas, alertas automáticas y reportes.',
+    highlights: ['Mapa en vivo con simulador GPS sobre una ruta real de Medellín', 'Geocercas dibujadas a mano y alertas de robo, desvío y parada', 'API de Azure Functions que en la demo corre completa en el navegador'],
+    stack: ['Angular', 'Azure Functions', 'Node.js', 'SQLite', 'Leaflet'],
+    image: 'projects/wms.webp',
+    gallery: ['projects/wms-dashboard.webp'],
+    demo: `${PAGES}/WMS/`,
+    repo: `${GH}/WMS`,
+    accent: '#2F6FED',
+  },
   {
     id: 'waia',
     name: 'Waia',

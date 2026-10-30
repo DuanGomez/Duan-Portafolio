@@ -41,6 +41,19 @@ const GH = 'https://github.com/DuanGomez';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'brackit',
+    name: 'Brackit',
+    kicker: 'SaaS de gestión de torneos',
+    summary: 'Plataforma multi-organización para ligas, clubes y empresas: cada una gestiona sus torneos, sedes, canchas, equipos y árbitros, y publica marcadores en vivo en su propia página.',
+    highlights: ['Programación automática en canchas que respeta horarios, bloqueos y descanso de los equipos', 'Consola del árbitro en el celular con marcador en vivo por WebSocket', '7 deportes con sus reglas, roles por organización y planes con límites'],
+    stack: ['React', 'TypeScript', 'Spring Boot', 'PostgreSQL', 'WebSocket'],
+    image: 'projects/brackit.webp',
+    gallery: ['projects/brackit-panel.webp'],
+    demo: 'https://brackit.dcodea-correo.workers.dev/',
+    repo: `${GH}/Brackit`,
+    accent: '#1F5BFF',
+  },
+  {
     id: 'wms',
     name: 'WMS',
     kicker: 'SaaS de monitoreo de flotas',

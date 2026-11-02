@@ -17,7 +17,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '9+', label: 'proyectos publicados' },
+  { value: '10+', label: 'proyectos publicados' },
   { value: '7', label: 'meses en WeSportech' },
   { value: '4.º', label: 'semestre de Ingeniería' },
 ];
@@ -40,6 +40,19 @@ const PAGES = 'https://duangomez.github.io';
 const GH = 'https://github.com/DuanGomez';
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'beside',
+    name: 'Beside',
+    kicker: 'App móvil para estar cerca de los tuyos',
+    summary: 'App para Android e iPhone que muestra en un mapa nocturno dónde está tu gente en tiempo real, con su batería y la canción que suena en su Spotify, y avisa cuando llegan a sus lugares.',
+    highlights: ['Ubicación en segundo plano que resiste el ahorro de batería de cada marca, con modo «juntitos» cuando dos personas están cerca', 'Avisos automáticos de llegadas, salidas y batería baja desde el servidor (Supabase + ntfy)', 'Mapa vectorial MapLibre con estilo propio, historial de 30 días que se limpia solo y actualizaciones dentro de la app'],
+    stack: ['Flutter', 'Dart', 'Supabase', 'PostgreSQL', 'MapLibre'],
+    image: 'projects/beside.webp',
+    gallery: ['projects/beside-lugares.webp'],
+    demo: 'https://duangomez.github.io/Beside/demo/',
+    repo: `${GH}/Beside`,
+    accent: '#F2789A',
+  },
   {
     id: 'brackit',
     name: 'Brackit',

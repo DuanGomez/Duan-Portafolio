@@ -1,6 +1,9 @@
-# Publica el portafolio en GitHub Pages.
-# Requisito único: Settings → Pages → Build and deployment → Source: "GitHub Actions".
-name: Deploy to GitHub Pages
+# El portafolio vive en Cloudflare Pages: https://duangomez.pages.dev
+#  - Cloudflare: se publica con cada push si el repo tiene los secretos
+#    CLOUDFLARE_API_TOKEN y CLOUDFLARE_ACCOUNT_ID (si no, se publica a mano con
+#    «npx wrangler pages deploy dist --project-name duangomez»).
+#  - GitHub Pages (la dirección vieja) solo redirige al dominio nuevo.
+name: Publicar portafolio
 
 on:
   push:
@@ -19,6 +22,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,9 +35,32 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Publicar en Cloudflare Pages
+        if: env.CF_TOKEN != ''
+        run: npx -y wrangler@4 pages deploy dist --project-name duangomez --branch main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      - name: Página de redirección para la dirección vieja
+        run: |
+          mkdir -p redirect
+          cat > redirect/index.html <<'HTML'
+          <!doctype html>
+          <html lang="es"><head><meta charset="utf-8">
+          <title>Duan Gómez — portafolio</title>
+          <meta http-equiv="refresh" content="0; url=https://duangomez.pages.dev/">
+          <link rel="canonical" href="https://duangomez.pages.dev/">
+          <script>location.replace('https://duangomez.pages.dev/' + location.hash)</script>
+          </head><body style="font-family:sans-serif;background:#0b0f19;color:#e6e9f2;display:grid;place-items:center;height:100vh;margin:0">
+          <p>Mi portafolio se mudó a <a style="color:#5cc8ff" href="https://duangomez.pages.dev/">duangomez.pages.dev</a></p>
+          </body></html>
+          HTML
+          cp redirect/index.html redirect/404.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: redirect
 
   deploy:
     needs: build

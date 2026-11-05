@@ -17,7 +17,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '10+', label: 'proyectos publicados' },
+  { value: '11+', label: 'proyectos publicados' },
   { value: '7', label: 'meses en WeSportech' },
   { value: '4.º', label: 'semestre de Ingeniería' },
 ];
@@ -40,6 +40,19 @@ const PAGES = 'https://duangomez.github.io';
 const GH = 'https://github.com/DuanGomez';
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'vellum',
+    name: 'Vellum',
+    kicker: 'Agenda de citas para barberías, estéticas y consultorios',
+    summary: 'Cada negocio tiene su página de reservas: el cliente elige servicio, profesional y una hora libre de verdad, y el negocio gestiona su agenda del día y recuerda las citas por WhatsApp.',
+    highlights: ['Disponibilidad calculada en el servidor: horarios con pausas, ausencias, duración del servicio y citas tomadas, sin dobles reservas', 'Agenda con una columna por profesional, estados de la cita, clientes con historial y reportes de ingresos e inasistencia', 'Recordatorios con un toque por WhatsApp y envío automático opcional con la API oficial de Meta'],
+    stack: ['Angular', 'TypeScript', 'PHP', 'Laravel', 'PostgreSQL'],
+    image: 'projects/vellum.webp',
+    gallery: ['projects/vellum-panel.webp'],
+    demo: 'https://vellum-citas.pages.dev/',
+    repo: `${GH}/Vellum`,
+    accent: '#B4532A',
+  },
   {
     id: 'beside',
     name: 'Beside',

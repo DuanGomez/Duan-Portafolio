@@ -17,7 +17,7 @@ export const PROFILE = {
 };
 
 export const STATS = [
-  { value: '11+', label: 'proyectos publicados' },
+  { value: '12+', label: 'proyectos publicados' },
   { value: '7', label: 'meses en WeSportech' },
   { value: '4.º', label: 'semestre de Ingeniería' },
 ];
@@ -40,6 +40,19 @@ const PAGES = 'https://duangomez.github.io';
 const GH = 'https://github.com/DuanGomez';
 
 export const PROJECTS: Project[] = [
+  {
+    id: 'vexli',
+    name: 'Vexli',
+    kicker: 'Inventario y caja diaria para tiendas',
+    summary: 'Punto de venta para tiendas pequeñas: se vende en segundos con lector de código de barras, cada venta descuenta el inventario y al final del día la caja se cierra con arqueo y diferencia.',
+    highlights: ['Caja con cobro en efectivo, transferencia, tarjeta o mixto, cálculo del cambio, recibo y anulaciones que devuelven existencias', 'Inventario con costo promedio ponderado, conteos, mermas, alertas de existencias mínimas e historial de movimientos', 'Resumen del día, reportes de margen y vitrina pública con pedidos por WhatsApp; una sola demo con un mes de ventas'],
+    stack: ['React', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL'],
+    image: 'projects/vexli.webp',
+    gallery: ['projects/vexli-panel.webp'],
+    demo: 'https://vexli-caja.pages.dev/',
+    repo: `${GH}/Vexli`,
+    accent: '#16A34A',
+  },
   {
     id: 'vellum',
     name: 'Vellum',

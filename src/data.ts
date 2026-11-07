@@ -6,8 +6,8 @@ export const PROFILE = {
   role: 'Desarrollador de Software',
   location: 'Medellín, Colombia',
   email: 'duangomez8@gmail.com',
-  phone: '+57 323 292 2041',
-  whatsapp: 'https://wa.me/573232922041',
+  phone: '+57 323 468 6377',
+  whatsapp: 'https://wa.me/573234686377',
   github: 'https://github.com/DuanGomez',
   dcodea: 'https://www.instagram.com/dcod.ea/',
   summary:
